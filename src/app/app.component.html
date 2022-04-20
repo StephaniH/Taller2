@@ -1,23 +1,23 @@
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
+<!-- <div class="toolbar" role="banner">
   <img
     width="120"
     alt="Game Logo"
     src="assets/img/logo.png"
   />
-  <span class="texto-grande">JUEGOS EN ANGULAR</span>
+  <span class="texto-grande">BIENVENIDOS</span>
     <div class="spacer"></div>
     <img
     width="120"
     alt="Game Logo"
     src="assets/img/logo.png"
   />
-</div>
+</div> -->
 
-<div class="content" role="main">
+<!-- <div class="content" role="main"> -->
 
   <!-- Entretenimiento -->
-  <h2 class="texto-mediano">Entretenimiento</h2>
+  <!-- <h2 class="texto-mediano">Entretenimiento</h2>
 
   <nav>
     <a routerLink="/ppt">Piedra, papel o tijeras</a>
@@ -26,4 +26,14 @@
   <a class="card" target="_blank" rel="noopener" href="https://www.pokemon.com/el/pokedex/">
     <span>Pokédex</span>
   </a>
+  </div> -->
+
+  <div class="row container mt-4">
+    <div class="col-3">
+      <app-sidebar></app-sidebar>
+    </div>
+
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
   </div>

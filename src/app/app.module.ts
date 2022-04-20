@@ -3,18 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { P1Component } from './p1/p1.component';
-import { P2Component } from './p2/p2.component';
+import { JuegosModule } from './juegos/juegos.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    P1Component,
-    P2Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    JuegosModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
