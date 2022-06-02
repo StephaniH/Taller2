@@ -23,4 +23,16 @@ export class CalculadoraComponent implements OnInit {
   public add(){
     this.result = this.num1 + this.num2
   }
+
+  public sub(){
+    this.result = this.num1 - this.num2
+  }
+
+  public mul(){
+    this.result = this.num1 * this.num2
+  }
+
+  public div(){
+    this.result = this.num1 / this.num2
+  }
 }
