@@ -1,0 +1,11 @@
+.title, .info-game {
+    width: 100%;
+    background: white;
+    color: #110F26;
+    padding: 20px;
+    text-align: center;
+}
+.casilla{
+  height: 50px;
+  width: 50px;
+}

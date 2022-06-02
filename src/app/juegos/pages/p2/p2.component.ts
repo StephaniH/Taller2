@@ -35,27 +35,27 @@ export class P2Component {
 
   verificarGano(ficha: string) {
     if (this.posiciones[0][0]==ficha && this.posiciones[0][1]==ficha && this.posiciones[0][2]==ficha)
-      alert('Gano:'+ficha);
+      alert('Ganó: '+ficha);
     
     if (this.posiciones[1][0]==ficha && this.posiciones[1][1]==ficha && this.posiciones[1][2]==ficha)
-      alert('Gano:'+ficha);
+      alert('Ganó: '+ficha);
     
     if (this.posiciones[2][0]==ficha && this.posiciones[2][1]==ficha && this.posiciones[2][2]==ficha)
-      alert('Gano:'+ficha);
+      alert('Ganó: '+ficha);
     
     if (this.posiciones[0][0]==ficha && this.posiciones[1][0]==ficha && this.posiciones[2][0]==ficha)
-      alert('Gano:'+ficha);
+      alert('Ganó: '+ficha);
     
     if (this.posiciones[0][1]==ficha && this.posiciones[1][1]==ficha && this.posiciones[2][1]==ficha)
-      alert('Gano:'+ficha);
+      alert('Ganó: '+ficha);
     
     if (this.posiciones[0][2]==ficha && this.posiciones[1][2]==ficha && this.posiciones[2][2]==ficha)
-      alert('Gano:'+ficha);      
+      alert('Ganó: '+ficha);      
     
     if (this.posiciones[0][0]==ficha && this.posiciones[1][1]==ficha && this.posiciones[2][2]==ficha)
-      alert('Gano:'+ficha);
+      alert('Ganó: '+ficha);
     
     if (this.posiciones[0][2]==ficha && this.posiciones[1][1]==ficha && this.posiciones[2][0]==ficha)
-      alert('Gano:'+ficha);      
+      alert('Ganó: '+ficha);      
   }
 }

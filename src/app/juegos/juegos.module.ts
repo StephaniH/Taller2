@@ -1,22 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'; 
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { P1Component } from './pages/p1/p1.component';
 import { P2Component } from './pages/p2/p2.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
+import { CalculadoraComponent } from './pages/calculadora/calculadora.component';
 
 @NgModule({
   declarations: [
     P1Component,
     P2Component,
-    PrincipalComponent
+    PrincipalComponent,
+    CalculadoraComponent
   ],
   exports: [
     P1Component,
     P2Component
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class JuegosModule { }
