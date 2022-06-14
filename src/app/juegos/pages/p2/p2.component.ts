@@ -10,6 +10,9 @@ export class P2Component {
   ['-','-','-'],
   ['-','-','-']];
   jugador='O';
+  user: string = ""
+  jugador1 = 0
+  jugador2= 0
 
   presion(fila:number,columna:number) {
     if (this.posiciones[fila][columna]=='-') {
@@ -34,28 +37,45 @@ export class P2Component {
   }
 
   verificarGano(ficha: string) {
-    if (this.posiciones[0][0]==ficha && this.posiciones[0][1]==ficha && this.posiciones[0][2]==ficha)
+    if (this.posiciones[0][0]==ficha && this.posiciones[0][1]==ficha && this.posiciones[0][2]==ficha){
       alert('Ganó: '+ficha);
-    
-    if (this.posiciones[1][0]==ficha && this.posiciones[1][1]==ficha && this.posiciones[1][2]==ficha)
+      this.ganador(ficha)
+    }
+    if (this.posiciones[1][0]==ficha && this.posiciones[1][1]==ficha && this.posiciones[1][2]==ficha){
       alert('Ganó: '+ficha);
-    
-    if (this.posiciones[2][0]==ficha && this.posiciones[2][1]==ficha && this.posiciones[2][2]==ficha)
+      this.ganador(ficha)
+    }
+    if (this.posiciones[2][0]==ficha && this.posiciones[2][1]==ficha && this.posiciones[2][2]==ficha){
       alert('Ganó: '+ficha);
-    
-    if (this.posiciones[0][0]==ficha && this.posiciones[1][0]==ficha && this.posiciones[2][0]==ficha)
+      this.ganador(ficha)
+    }
+    if (this.posiciones[0][0]==ficha && this.posiciones[1][0]==ficha && this.posiciones[2][0]==ficha){
       alert('Ganó: '+ficha);
-    
-    if (this.posiciones[0][1]==ficha && this.posiciones[1][1]==ficha && this.posiciones[2][1]==ficha)
+      this.ganador(ficha)
+    }
+    if (this.posiciones[0][1]==ficha && this.posiciones[1][1]==ficha && this.posiciones[2][1]==ficha){
       alert('Ganó: '+ficha);
-    
-    if (this.posiciones[0][2]==ficha && this.posiciones[1][2]==ficha && this.posiciones[2][2]==ficha)
-      alert('Ganó: '+ficha);      
-    
-    if (this.posiciones[0][0]==ficha && this.posiciones[1][1]==ficha && this.posiciones[2][2]==ficha)
+      this.ganador(ficha)
+    }
+    if (this.posiciones[0][2]==ficha && this.posiciones[1][2]==ficha && this.posiciones[2][2]==ficha){
       alert('Ganó: '+ficha);
-    
-    if (this.posiciones[0][2]==ficha && this.posiciones[1][1]==ficha && this.posiciones[2][0]==ficha)
-      alert('Ganó: '+ficha);      
+      this.ganador(ficha)      
+    }
+    if (this.posiciones[0][0]==ficha && this.posiciones[1][1]==ficha && this.posiciones[2][2]==ficha){
+      alert('Ganó: '+ficha);
+      this.ganador(ficha)
+    }
+    if (this.posiciones[0][2]==ficha && this.posiciones[1][1]==ficha && this.posiciones[2][0]==ficha){
+      alert('Ganó: '+ficha);
+      this.ganador(ficha) 
+    }
+  }
+
+  ganador(jugador: string){
+    if (jugador=='O')
+      this.jugador1+=1;
+    else
+    this.jugador2+=1;
+
   }
 }
