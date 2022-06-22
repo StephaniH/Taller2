@@ -1,0 +1,14 @@
+
+<div class="row mt-5">
+    <div class="col-md-3 col-sm-12">
+        <ul class="list-group">
+            <li *ngFor="let item of menu"
+                class="list-group-item"
+                [routerLink]="[item.ruta]"
+                routerLinkActive="active">
+                {{item.texto}}
+            </li>
+        
+        </ul>
+    </div>
+</div>
