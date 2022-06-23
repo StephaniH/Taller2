@@ -4,7 +4,7 @@ import { NgChartsModule } from 'ng2-charts';
 
 import { GraficasRoutingModule } from './graficas-routing.module';
 import { BarrasComponent } from './pages/barras/barras.component';
-import { BarrasDoblesComponent } from './pages/barras-dobles/barras-dobles.component';
+import { BarrasDoblesComponent } from './pages/radar/barras-dobles.component';
 import { DonaComponent } from './pages/dona/dona.component';
 import { DonaHttpComponent } from './pages/dona-http/dona-http.component';
 import { GraficaBarraComponent } from './components/grafica-barra/grafica-barra.component';

@@ -9,6 +9,6 @@ export class GraficasService {
   constructor(private http: HttpClient) { }
 
   getUsuariosRedesSociales(){
-    return this.http.get('http://localhost:3000/graficas')
+    return this.http.get('http://localhost:3000/grafica')
   }
 }

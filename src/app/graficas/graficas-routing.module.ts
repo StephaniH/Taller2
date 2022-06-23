@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GraficaBarraComponent } from './components/grafica-barra/grafica-barra.component';
-import { BarrasDoblesComponent } from './pages/barras-dobles/barras-dobles.component';
+import { BarrasDoblesComponent } from './pages/radar/barras-dobles.component';
 import { BarrasComponent } from './pages/barras/barras.component';
 import { DonaHttpComponent } from './pages/dona-http/dona-http.component';
 import { DonaComponent } from './pages/dona/dona.component';
