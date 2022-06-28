@@ -7,6 +7,7 @@ import { P3Component } from './juegos/pages/p3/p3.component';
 import { CalculadoraComponent } from './juegos/pages/calculadora/calculadora.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { DirectivaComponent } from './juegos/pages/directiva/directiva.component';
+import { GifSidebarComponent } from './shared/gif-sidebar/gif-sidebar.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: "principal" },
@@ -15,11 +16,14 @@ const routes: Routes = [
   { path: 'gato', component: P2Component },
   { path: 'can', component: P3Component },
   { path: 'principal', component: SidebarComponent},
+  { path: 'directivas', component: DirectivaComponent},
   {
     path: 'graficas',
     loadChildren: () => import('./graficas/graficas.module').then( m => m.GraficasModule)
   },
-  { path: 'directivas', component: DirectivaComponent}
+  
+  {path: 'gifs', component: GifSidebarComponent  }
+  
 ];
 
 @NgModule({

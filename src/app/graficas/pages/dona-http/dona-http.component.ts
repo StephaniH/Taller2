@@ -33,6 +33,6 @@ export class DonaHttpComponent implements OnInit {
           this.doughnutChartData.labels = labels;
           this.doughnutChartData.datasets[0].data=values ;
     });
-  }
+  } 
 
 }
