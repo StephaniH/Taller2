@@ -6,6 +6,7 @@ import { P2Component } from './juegos/pages/p2/p2.component';
 import { P3Component } from './juegos/pages/p3/p3.component';
 import { CalculadoraComponent } from './juegos/pages/calculadora/calculadora.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { DirectivaComponent } from './juegos/pages/directiva/directiva.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: "principal" },
@@ -17,8 +18,8 @@ const routes: Routes = [
   {
     path: 'graficas',
     loadChildren: () => import('./graficas/graficas.module').then( m => m.GraficasModule)
-  }
-  
+  },
+  { path: 'directivas', component: DirectivaComponent}
 ];
 
 @NgModule({

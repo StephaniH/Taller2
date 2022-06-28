@@ -1,0 +1,24 @@
+/*ngClass*/
+.rojo{
+    background-color: red;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+/*ngSwitch*/
+.blue {
+    color: blue
+  }
+  .yellow {
+    color: yellow
+  }
+  .silver {
+    color: silver
+  }
+  .red {
+    color: red
+  }
+  .green {
+    color: green
+  }

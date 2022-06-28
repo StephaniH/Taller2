@@ -1,0 +1,112 @@
+<!-- ngClass -->
+<div>
+    <h1>
+      ngClass
+    </h1>
+    <p [ngClass]="{'rojo': flag}">
+        Hola
+    </p>
+    <button (click)="cambiarFlag()">
+      Cambiar clase
+    </button>
+  </div>
+  
+  <!-- ngStyle -->
+  <div>
+    <h1>
+      ngStyle
+    </h1>
+    <div class="container">
+      <div [ngStyle]="{'font-style':'italic', color:'white', 'background-color':'blue'}">
+        Text styled using ngStyle
+      </div>
+    </div>
+  </div>
+  
+  <!-- *ngIf, nt-template y *ngFor -->
+  <div>
+    <h1>
+      *ngIf, nt-template y *ngFor
+    </h1>
+    <div *ngIf="heroeBorrado; else noBorrado">
+      <h3>Héroe borrado: <small>{{heroeBorrado}}</small></h3>
+    </div>
+    <ng-template #noBorrado>
+      <h3>No ha borrado nada</h3>
+    </ng-template>
+    <button (click)="borrarHeroe()">
+      Borrar
+    </button>
+    <ul>
+      <li *ngFor="let heroe of heroes">
+        {{heroe}}
+      </li>
+    </ul>
+  </div>
+  
+  <!-- ngSwitch -->
+  <div>
+    <h1>
+      ngSwitch
+    </h1>
+    <div *ngFor="let car of Cars" [ngSwitch]="car.color"> 
+      <div *ngSwitchCase="'blue'" class="blue"> 
+        {{ car.name }} ({{ car.color }}) 
+      </div> 
+      <div *ngSwitchCase="'yellow'" class="yellow"> 
+        {{ car.name }} ({{ car.color }}) 
+      </div> 
+      <div *ngSwitchCase="'silver'" class="silver"> 
+        {{ car.name }} ({{ car.color }}) 
+      </div> 
+      <div *ngSwitchCase="'red'" class="red"> 
+        {{ car.name }} ({{ car.color }}) 
+      </div>
+      <div *ngSwitchCase="'green'" class="green"> 
+        {{ car.name }} ({{ car.color }}) 
+      </div> 
+      <div *ngSwitchDefault class="text-warning"> 
+        {{ car.name }} ({{ car.color }}) 
+      </div> 
+    </div>
+  </div>
+  
+  <!-- ngPlural -->
+  <div>
+    <h1>
+      ngPlural
+    </h1>
+    <h3>Ejemplo-1</h3>
+    <div [ngPlural]="itemNum">
+        <ng-template ngPluralCase="=0">No hay nada</ng-template>
+        <ng-template ngPluralCase="=1">Hay un artículo</ng-template>
+        <ng-template ngPluralCase="other">Hay {{itemNum}} artículos</ng-template>
+    </div>
+    <h3>Ejemplo-2</h3>
+    <div [ngPlural]="personNum">
+        <ng-template ngPluralCase="=0">Ninguna persona</ng-template>
+        <ng-template ngPluralCase="=1">Una persona</ng-template>
+        <ng-template ngPluralCase="=2">Dos personas</ng-template>
+        <ng-template ngPluralCase="other">Muchas personas</ng-template>
+    </div>
+    <h3>Ejemplo-3</h3>
+    <div [ngPlural]="minutes">
+        <ng-template ngPluralCase="=0">justo ahora</ng-template>
+        <ng-template ngPluralCase="=1">Después de un minuto</ng-template>
+        <ng-template ngPluralCase="other">Después de {{minutes}} minutos</ng-template>
+    </div> 
+  </div>
+  
+  <!-- crear nueva directiva -->
+  <div>
+    <h1>
+      Creación de directiva
+    </h1>
+    <h2 appHighlight>Highlight me!</h2>
+  </div>
+  
+  <!-- @Output -->
+  <div>
+    <h1> Input y Output</h1>
+    <app-hijo [usuarioInChild]="usuarioInParent" (miEvento)="getMensaje($event)"></app-hijo>
+  </div>
