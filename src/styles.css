@@ -28,7 +28,7 @@
   /*Modificación del fondo*/
   body{
     background-color: rgb(149, 173, 180);
-    color: white;
+    
   }
 
 .toolbar img {
@@ -52,5 +52,6 @@ html, body {
   height: 100%;
   min-height: 100vh;
   min-width: 180px;
+  color: blue;
 }
 
