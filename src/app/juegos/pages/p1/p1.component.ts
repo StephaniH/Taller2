@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GameService } from './game.service';
+import { GameService } from '../../../services/game.service';
+import { TimerService } from '../../../services/timer.service';
 
 @Component({
   selector: 'app-p1',
@@ -16,7 +17,7 @@ export class P1Component implements OnInit {
   tiempo: number =5;
   interval: any
 
-  constructor(private playGame: GameService) {}
+  constructor(private playGame: GameService, private timerGame: TimerService) {}
 
   ngOnInit(): void {
     this.result = 'Esperando jugada...';
@@ -38,7 +39,7 @@ export class P1Component implements OnInit {
     this.interval = setInterval(() => {
       this.tiempo--
       if(this.tiempo == 0) {
-        const result = this.playGame.lose();
+        const result = this.timerGame.lose();
         this.result = result.message;
         this.pointsUser += result.userAdd;
         this.pointsComp += result.compAdd;
