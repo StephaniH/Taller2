@@ -1,38 +1,8 @@
-  /*Modificación del texto título*/
-  span.texto-grande {
-    font-size: 5em;
-    color: black;
-  }
 
-    /*Modificación del texto título*/
-    span.texto-mediano {
-      font-size: 3em;
-      color: black;
-      text-align: center;
-    }
-
-  /*Modificación del logo*/
-  .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 130px;
-    display: flex;
-    align-items: center;
-    background-color: #13a8fe;
-    color: #000117;
-    font-weight: 600;
-  }
-
-  /*Modificación del fondo*/
-  body{
+body, html {
+    height: 100%;
     background-color: rgb(149, 173, 180);
-    
-  }
 
-.toolbar img {
-  margin: 0 140px;
 }
 
 .content {
@@ -43,9 +13,6 @@
   flex-direction: column;
   align-items: center;
 }
-html, body {
-  height: 100%;
-}
 
 
 #sidebar {
@@ -55,3 +22,30 @@ html, body {
   color: blue;
 }
 
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('./assets/fonts/poppins/Poppins-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('./assets/fonts/poppins/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('./assets/fonts/poppins/Poppins-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('./assets/fonts/poppins/Poppins-SemiBold.ttf'); 
+}
+
+
+ 
+
+  

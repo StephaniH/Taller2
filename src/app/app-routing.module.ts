@@ -8,6 +8,7 @@ import { CalculadoraComponent } from './juegos/pages/calculadora/calculadora.com
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { DirectivaComponent } from './juegos/pages/directiva/directiva.component';
 import { GifSidebarComponent } from './shared/gif-sidebar/gif-sidebar.component';
+import { ValidarTokenGuard } from './auth/guards/validar-token.guard';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: "principal" },
@@ -22,7 +23,19 @@ const routes: Routes = [
     loadChildren: () => import('./graficas/graficas.module').then( m => m.GraficasModule)
   },
   
-  {path: 'gifs', component: GifSidebarComponent  }
+  {path: 'gifs', component: GifSidebarComponent  },
+
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule )
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./protected/protected.module').then( m => m.ProtectedModule ),
+    canActivate: [ ValidarTokenGuard],
+    canLoad: [ ValidarTokenGuard ]
+  }
+
   
 ];
 
