@@ -1,10 +1,9 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, map, Observable, of, tap } from 'rxjs';
-import { AuthResponse, Usuario } from '../interface/interface';
-
+import { AuthResponse, Usuario } from '../auth/interface/interface';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
 
@@ -79,6 +78,10 @@ export class AuthService {
           catchError( err => of(false) )
         );
 
+  }
+
+  getUserLogged() {
+    return {uid:([])}; 
   }
 
   logout() {

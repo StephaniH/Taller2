@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartData, ChartType } from 'chart.js';
-import { GraficasService } from '../../services/graficas.service';
+import { GraficasService } from '../../../services/graficas.service';
 
 @Component({
   selector: 'app-dona-http',
