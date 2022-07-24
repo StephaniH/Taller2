@@ -29,13 +29,13 @@ export class ChatComponent implements OnInit {
     }
   ]
 
-  constructor(private authService: AuthService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.authService.getUserLogged().
-    // .subscribe((u: any) => {
-    //   this.usuarioLogueado = u;
-    // });
+  //   this.authService.getUserLogged().
+  //   // .subscribe((u: any) => {
+  //   //   this.usuarioLogueado = u;
+  //   // });
   }
 
   enviarMensaje(){

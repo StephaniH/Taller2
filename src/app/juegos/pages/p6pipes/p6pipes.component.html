@@ -1,0 +1,209 @@
+<!-- https://angular.io/api?query=pipe -->
+<div class="container">
+    <h1>Pipes básicos</h1>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Uppercase</h5>
+                    <p class="card-text">Original: {{nombreLower}}</p>
+                    <p class="card-text">Modificada: {{nombreLower | uppercase}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Lowercase</h5>
+                    <p class="card-text">Original: {{nombreUpper}}</p>
+                    <p class="card-text">Modificada: {{nombreUpper | lowercase}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Titlecase</h5>
+                    <p class="card-text">Original: {{nombreAleatorio}}</p>
+                    <p class="card-text">Modificada: {{nombreAleatorio | titlecase}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+
+<!-- https://angular.io/api/common/DatePipe -->
+<div class="container">
+    <h1>Pipes fechas</h1>
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="card">
+                <div class="card-body">
+                    <ul>
+                        <li>fecha</li>
+                        <li>fecha | date</li>
+                        <li>fecha | date:'short'</li>
+                        <li>fecha | date:'long'</li>
+                        <li>fecha | date:'YYYY, G'</li>
+                        <li>fecha | date:'long':'GMT-6'</li>
+                        <li>fecha | date:'long':'GMT-4':'ja'</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <ul>
+                        <li>{{fecha}}</li>
+                        <li>{{fecha | date}}</li>
+                        <li>{{fecha | date:'short'}}</li>
+                        <li>{{fecha | date:'long'}}</li>
+                        <li>{{fecha | date:'YYYY, G'}}</li>
+                        <li>{{fecha | date:'long':'GMT-6'}}</li>
+                        <li>{{fecha | date:'long':'GMT-4':'ja'}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+
+<!-- https://angular.io/api/common/DecimalPipe -->
+<div class="container">
+    <h1>DecimalPipes, CurrencyPipes y Porcentajes</h1>
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Decimales</h5>
+                    <ul>
+                        <li>numeroReal | number</li>
+                        <li>numeroReal | number:'1.2-2'</li>
+                    </ul>
+                    <hr>
+                    <h5 class="card-title">Divisas</h5>
+                    <ul>
+                        <li>numeroReal | currency</li>
+                        <li>numeroReal | currency:'MXN'</li>
+                        <li>numeroReal | currency:'GBP':'symbol-narrow'</li>
+                    </ul>
+                    <hr>
+                    <h5 class="card-title">Porcentaje</h5>
+                    <ul>
+                        <li>porcentaje | percent</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Decimales</h5>
+                    <ul>
+                        <li>{{numeroReal | number}}</li>
+                        <li>{{numeroReal | number:'1.2-2'}}</li>
+                    </ul>
+                    <hr>
+                    <h5 class="card-title">Divisas</h5>
+                    <ul>
+                        <li>{{numeroReal | currency}}</li>
+                        <li>{{numeroReal | currency:'MXN'}}</li>
+                        <li>{{numeroReal | currency:'GBP':'symbol-narrow'}}</li>
+                    </ul>
+                    <hr>
+                    <h5 class="card-title">Porcentaje</h5>
+                    <ul>
+                        <li>{{porcentaje | percent}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+
+<!-- https://angular.io/api/common/I18nSelectPipe -->
+<!-- https://angular.io/api/common/I18nPluralPipe -->
+<!-- https://angular.io/api/common/SlicePipe -->
+<!-- https://angular.io/api/common/KeyValuePipe -->
+<!-- https://angular.io/api/common/JsonPipe -->
+<div class="container">
+    <h1>Pipes no tan comunes</h1>
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">i18nSelect Pipe</h5>
+                    <p class="card-text">Saludos {{ nombreGenero }}, {{genero | i18nSelect:invitacionMapa}} al taller de angular</p>
+                    <button (click)="cambiarNombre()">Cambiar nombre</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">i18nPlural Pipe</h5>
+                    <p class="card-text"> Actualmente {{clientes.length | i18nPlural:clientesMapa}}</p>
+                    <button (click)="borrarClientes()">Borrar clientes</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Slice Pipe</h5>
+                    <ul>
+                        <li>Original: {{clientes | slice:0}}</li>
+                        <li>Slice:0:2 {{clientes | slice:0:2}}</li>
+                        <li>Slice:1:3 {{clientes | slice:1:3}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Json Pipe</h5>
+                    <pre>{{heroes | json}}</pre>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">KeyValue Pipe</h5>
+                    <ul>
+                        <li *ngFor="let item of persona | keyvalue">
+                            {{item.key | titlecase}}: {{item.value}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Async Pipe</h5>
+                    <pre>Observable: {{miObservable | async}}</pre>
+                    <pre>Promesa: {{miPromesa | async}}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+
+<div class="container">
+    <h1>Pipes personalizados</h1>
+    <p>Pipes creados por {{'nosotros' | mayusculas}}</p>
+    <hr>
+</div>

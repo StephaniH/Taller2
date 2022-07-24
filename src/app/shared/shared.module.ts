@@ -9,8 +9,7 @@ import { GifsModule } from '../gifs/gifs.module';
 @NgModule({
   declarations: [
     SidebarComponent,
-    GifSidebarComponent,
-    
+    GifSidebarComponent
   ],
   exports: [
     SidebarComponent,

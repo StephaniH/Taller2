@@ -10,6 +10,8 @@ import { P3Component } from './pages/p3/p3.component';
 import { DirectivaComponent } from './pages/directiva/directiva.component';
 import { HijoComponent } from './pages/directiva/hijo/hijo.component';
 import { HighlightDirective } from './pages/directiva/highlight.directive';
+import { P6pipesComponent } from './pages/p6pipes/p6pipes.component';
+import { MayusculasPipe } from '../pipes/mayusculas.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HighlightDirective } from './pages/directiva/highlight.directive';
     P3Component,
     DirectivaComponent,
     HijoComponent,
-    HighlightDirective
+    HighlightDirective,
+    P6pipesComponent,
+    MayusculasPipe
   ],
   exports: [
     P1Component,

@@ -9,6 +9,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { DirectivaComponent } from './juegos/pages/directiva/directiva.component';
 import { GifSidebarComponent } from './shared/gif-sidebar/gif-sidebar.component';
 import { ValidarTokenGuard } from './auth/guards/validar-token.guard';
+import { P6pipesComponent } from './juegos/pages/p6pipes/p6pipes.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: "principal" },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'can', component: P3Component },
   { path: 'principal', component: SidebarComponent},
   { path: 'directivas', component: DirectivaComponent},
+  { path: 'pipes', component: P6pipesComponent},
   {
     path: 'graficas',
     loadChildren: () => import('./graficas/graficas.module').then( m => m.GraficasModule)
