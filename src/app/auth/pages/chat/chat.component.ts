@@ -12,20 +12,52 @@ export class ChatComponent implements OnInit {
   usuarioLogueado: string='';
   mensajes:any = [
     {
-      emisor:'id',
+      emisor:'enviado',
       texto: 'Hola que tal?'
     },
     {
-      emisor:'id',
+      emisor:'recibido',
       texto: 'Hola'
     },
     {
-      emisor:'id',
+      emisor:'enviado',
       texto: 'como estas?'
     },
     {
-      emisor:'id',
+      emisor:'recibido',
       texto: 'Bien, y tu?'
+    },
+    {
+      emisor:'enviado',
+      texto: 'dc?'
+    },
+    {
+      emisor:'recibido',
+      texto: 'Holacdscds'
+    },
+    {
+      emisor:'enviado',
+      texto: 'codcsdc?'
+    },
+    {
+      emisor:'recibido',
+      texto: 'Bcdscsdcsdcdd?'
+    },
+    {
+      emisor:'enviado',
+      texto: 'Hola que taldscds?'
+    },
+    {
+      emisor:'recibido',
+      texto: 'Hola ds ds sd'
+    },
+    {
+      emisor:'enviado',
+      texto: 'como estasd ds sd ds?'
+    },
+    {
+      emisor:'recibido',
+      texto: 'Bien, y tuds ds ds d sd ?'
     }
   ]
 

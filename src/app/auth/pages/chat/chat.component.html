@@ -1,4 +1,4 @@
-<div class="card test-center cardContainer" *ngIf="usuarioLogueado">
+<!-- <div class="card test-center cardContainer" *ngIf="usuarioLogueado">
     <div class="card-header">
         CHAT
     </div>
@@ -13,8 +13,47 @@
         <input type="text" class="form-control" placeholder="Ingresar mensaje" [(ngModel)]="nuevoMensaje" [ngModelOptions]="{standalone: true}">
         <div class="input-group-append" (click)="enviarMensaje()">
             <span class="input-group-text" id="basic-addon2">
-            <img class="imgEnviar" src="https://e7.pngegg.com/pngimages/891/367/png-clipart-computer-icons-symbol-send-email-button-miscellaneous-blue.png" width="20px" alt="send message"> 
+            <img class="imgEnviar" src="assets/images/icons/sendIcon.png" width="20px" alt="send message"> 
             </span>
         </div>
     </form>
+</div> -->
+
+<!-- <h1>CHAT</h1>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h5>Normas del chat</h5>
+                <p>
+                    No envíes contenido inapropiado, repetido o innecesario. 
+                    Usa una gramática correcta para facilitar la lectura.
+                    Pide permiso antes de enviar un mensaje con un adjunto multimedia para no ocupar la memoria de los usuario: solo en caso de consentimiento unánime será posible realizar el envío.
+                </p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="card test-center cardContainer">
+        <div class="card-header center">
+            id del destinatario
+        </div>
+        <div class="card-body">
+            <div>
+                <p *ngFor="let mensaje of mensajes" class="p-1" [ngClass]="(mensaje.emisor)? 'enviado' : 'recibido'">
+                    {{mensaje.texto}}
+                </p>
+            </div>
+        </div>
+        <form class="card-footer test-muted input-group" (ngSubmit)="enviarMensaje()">
+            <input type="text" class="form-control" placeholder="Ingresar mensaje" [(ngModel)]="nuevoMensaje" [ngModelOptions]="{standalone: true}">
+            <div class="input-group-append" (click)="enviarMensaje()">
+                <span class="input-group-text" id="basic-addon2">
+                <img class="imgEnviar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-EN6Gv-yRxx-RbHi-6ugufwzle6DKBUO6DQ&usqp=CAU" width="30px" alt="send message"> 
+                </span>
+            </div>
+        </form>
+    </div>
 </div>
