@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>¿Qué le enseñó Piccolo a Gohan?</h1>
+    <input class="mx-2 form-control" #piccoloInput (keyup)="keyUp(piccoloInput.value)">
+    <div>
+        <app-gohan [tecnicaGohan]="tecnicaPiccolo" (reaccionGohan)="defensa($event)"></app-gohan>
+        <img src="{{piccoloImg}}">
+        <!-- <img [src]="piccoloImg"> -->
+    </div>
+</div>
