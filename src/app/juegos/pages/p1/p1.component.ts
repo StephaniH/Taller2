@@ -34,7 +34,8 @@ export class P1Component implements OnInit {
     this.pointsComp += result.compAdd;
     this.tiempo = 5
   }
-   temporizador ():void {
+
+   temporizador (): void {
   
     this.interval = setInterval(() => {
       this.tiempo--
@@ -46,8 +47,5 @@ export class P1Component implements OnInit {
         this.tiempo= 5
       }
     },1000)
-
    }
-   
-
 }

@@ -13,7 +13,7 @@ import localeFr from '@angular/common/locales/ja';
 import { registerLocaleData } from '@angular/common';
 import { PiccoloComponent } from './piccolo/piccolo.component';
 import { GohanComponent } from './piccolo/gohan/gohan.component';
-// import { MayusculasPipe } from './pipes/mayusculas.pipe';
+
 registerLocaleData(localeEs);
 registerLocaleData(localeFr);
 
@@ -21,7 +21,7 @@ registerLocaleData(localeFr);
   declarations: [
     AppComponent,
     PiccoloComponent,
-    GohanComponent   
+    GohanComponent
   ],
   imports: [
     BrowserModule,

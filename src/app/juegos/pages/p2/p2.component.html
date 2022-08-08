@@ -3,22 +3,25 @@
 </div>
 
 <div style="text-align: center">
-    <button mat-raised-button (click)="presion(0,0)" class="casilla">{{posiciones[0][0]}}</button>
-    <button mat-raised-button (click)="presion(0,1)" class="casilla">{{posiciones[0][1]}}</button>
-    <button mat-raised-button (click)="presion(0,2)" class="casilla">{{posiciones[0][2]}}</button>
-    <br>
-    <button mat-raised-button (click)="presion(1,0)" class="casilla">{{posiciones[1][0]}}</button>
-    <button mat-raised-button (click)="presion(1,1)" class="casilla">{{posiciones[1][1]}}</button>
-    <button mat-raised-button (click)="presion(1,2)" class="casilla">{{posiciones[1][2]}}</button>
-    <br>
-    <button mat-raised-button (click)="presion(2,0)" class="casilla">{{posiciones[2][0]}}</button>
-    <button mat-raised-button (click)="presion(2,1)" class="casilla">{{posiciones[2][1]}}</button>
-    <button mat-raised-button (click)="presion(2,2)" class="casilla">{{posiciones[2][2]}}</button>
-  </div>
-  <div style="text-align: center">
-    <button mat-raised-button color="primary" (click)="reiniciar(0)">Reiniciar</button>
-  </div>
-  <div class="container">
-    <p class="f" [ngClass]="(cganador == 1)? 'j1' : 'j0'">Jugador1 {{jugador1}}</p>
-    <p class="f" [ngClass]="(cganador == 2)? 'j2' : 'j0'">Jugador2 {{jugador2}}</p>
-  </div>
+  <button mat-raised-button (click)="presion(0,0)" class="casilla">{{posiciones[0][0]}}</button>
+  <button mat-raised-button (click)="presion(0,1)" class="casilla">{{posiciones[0][1]}}</button>
+  <button mat-raised-button (click)="presion(0,2)" class="casilla">{{posiciones[0][2]}}</button>
+  <br>
+  <button mat-raised-button (click)="presion(1,0)" class="casilla">{{posiciones[1][0]}}</button>
+  <button mat-raised-button (click)="presion(1,1)" class="casilla">{{posiciones[1][1]}}</button>
+  <button mat-raised-button (click)="presion(1,2)" class="casilla">{{posiciones[1][2]}}</button>
+  <br>
+  <button mat-raised-button (click)="presion(2,0)" class="casilla">{{posiciones[2][0]}}</button>
+  <button mat-raised-button (click)="presion(2,1)" class="casilla">{{posiciones[2][1]}}</button>
+  <button mat-raised-button (click)="presion(2,2)" class="casilla">{{posiciones[2][2]}}</button>
+</div>
+
+<div style="text-align: center">
+  <button mat-raised-button color="primary" (click)="reiniciar(0)">Reiniciar</button>
+</div>
+
+<div class="container">
+  <p class="f" [ngClass]="(cganador == 1)? 'j1' : 'j0'">Jugador1 {{jugador1}}</p>
+  <p class="f" [ngClass]="(cganador == 2)? 'j2' : 'j0'">Jugador2 {{jugador2}}</p>
+</div>
+

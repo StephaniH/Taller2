@@ -12,6 +12,7 @@ import { HijoComponent } from './pages/directiva/hijo/hijo.component';
 import { HighlightDirective } from './pages/directiva/highlight.directive';
 import { P6pipesComponent } from './pages/p6pipes/p6pipes.component';
 import { MayusculasPipe } from '../pipes/mayusculas.pipe';
+import { VuelaPipe } from '../pipes/vuela.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MayusculasPipe } from '../pipes/mayusculas.pipe';
     HijoComponent,
     HighlightDirective,
     P6pipesComponent,
-    MayusculasPipe
+    MayusculasPipe,
+    VuelaPipe
   ],
   exports: [
     P1Component,

@@ -78,12 +78,14 @@
         <div class="col-sm-5">
             <div class="card">
                 <div class="card-body">
+                    <!-- Decimales -->
                     <h5 class="card-title">Decimales</h5>
                     <ul>
                         <li>numeroReal | number</li>
                         <li>numeroReal | number:'1.2-2'</li>
                     </ul>
                     <hr>
+                    <!-- Divisas -->
                     <h5 class="card-title">Divisas</h5>
                     <ul>
                         <li>numeroReal | currency</li>
@@ -91,9 +93,11 @@
                         <li>numeroReal | currency:'GBP':'symbol-narrow'</li>
                     </ul>
                     <hr>
+                    <!-- Porcentaje -->
                     <h5 class="card-title">Porcentaje</h5>
                     <ul>
                         <li>porcentaje | percent</li>
+                        <li>porcentaje | percent:'2.3-5'</li>
                     </ul>
                 </div>
             </div>
@@ -101,12 +105,14 @@
         <div class="col-sm-4">
             <div class="card">
                 <div class="card-body">
+                    <!-- Decimales -->
                     <h5 class="card-title">Decimales</h5>
                     <ul>
                         <li>{{numeroReal | number}}</li>
                         <li>{{numeroReal | number:'1.2-2'}}</li>
                     </ul>
                     <hr>
+                    <!-- Divisas -->
                     <h5 class="card-title">Divisas</h5>
                     <ul>
                         <li>{{numeroReal | currency}}</li>
@@ -114,9 +120,11 @@
                         <li>{{numeroReal | currency:'GBP':'symbol-narrow'}}</li>
                     </ul>
                     <hr>
+                    <!-- Porcentaje -->
                     <h5 class="card-title">Porcentaje</h5>
                     <ul>
                         <li>{{porcentaje | percent}}</li>
+                        <li>{{porcentaje | percent:'2.3-5'}}</li>
                     </ul>
                 </div>
             </div>
@@ -133,6 +141,7 @@
 <div class="container">
     <h1>Pipes no tan comunes</h1>
     <div class="row">
+        <!-- i18nSelect -->
         <div class="col-sm-5">
             <div class="card">
                 <div class="card-body">
@@ -142,9 +151,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <br>
-    <div class="row">
+        <!-- i18nPlural -->
         <div class="col-sm-5">
             <div class="card">
                 <div class="card-body">
@@ -154,6 +161,10 @@
                 </div>
             </div>
         </div>
+    </div>
+    <br>
+    <!-- Slice -->
+    <div class="row">
         <div class="col-sm-5">
             <div class="card">
                 <div class="card-body">
@@ -169,6 +180,7 @@
     </div>
     <br>
     <div class="row">
+        <!-- JSON -->
         <div class="col-sm-3">
             <div class="card">
                 <div class="card-body">
@@ -177,6 +189,7 @@
                 </div>
             </div>
         </div>
+        <!-- Keyvalue -->
         <div class="col-sm-3">
             <div class="card">
                 <div class="card-body">
@@ -189,6 +202,7 @@
                 </div>
             </div>
         </div>
+        <!-- Async -->
         <div class="col-sm-4">
             <div class="card">
                 <div class="card-body">
@@ -206,4 +220,22 @@
     <h1>Pipes personalizados</h1>
     <p>Pipes creados por {{'nosotros' | mayusculas}}</p>
     <hr>
+</div>
+
+<!-- Tarea -->
+<div class="container">
+    <h1>Ejercicio propuesto</h1>        
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Superhéroe</th>
+            <th scope="col">¿Vuela?</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let heroe of heroes">
+            <td>{{heroe.nombre}}</td>
+            <td>{{heroe.vuela | vuela}}</td>
+        </tr>
+    </table>
 </div>

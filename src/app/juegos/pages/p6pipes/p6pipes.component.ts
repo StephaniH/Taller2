@@ -17,7 +17,7 @@ export class P6pipesComponent {
  
    //Decimalpipes
    numeroReal: number = 2567789.5567;
-   porcentaje: number = 0.48;
+   porcentaje: number = 1.3495;
  
    //pipes no tan comunes
    //i18nSelect
@@ -64,7 +64,7 @@ export class P6pipesComponent {
    persona = {
      nombre: 'Fernando',
      edad: 35,
-     direccion: 'Ottawa, Canadá'
+     dirección: 'Ottawa, Canadá'
    }
  
    //Async Pipe
