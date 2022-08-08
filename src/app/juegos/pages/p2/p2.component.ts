@@ -13,6 +13,7 @@ export class P2Component {
   user: string = ""
   jugador1 = 0
   jugador2= 0
+  cganador=0
 
   presion(fila:number,columna:number) {
     if (this.posiciones[fila][columna]=='-') {
@@ -23,7 +24,8 @@ export class P2Component {
     }
   }
 
-  reiniciar() {
+  reiniciar(status:number) {
+    this.cganador = status
     for(let f=0;f<3;f++)
     for(let c=0;c<3;c++)
     this.posiciones[f][c]='-';
@@ -72,10 +74,17 @@ export class P2Component {
   }
 
   ganador(jugador: string){
-    if (jugador=='O')
+    if (jugador=='O'){
+
       this.jugador1+=1;
-    else
-    this.jugador2+=1;
+      this.cganador = 1
+    }
+    else{
+
+      this.jugador2+=1;
+      this.cganador = 2
+    }
+
 
   }
 }
