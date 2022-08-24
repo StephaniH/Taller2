@@ -25,4 +25,9 @@ export class GraficaBarraComponent {
     {ruta: '/graficas/dona-http', texto:'Dona Http'}
 
   ];
+
+  voto(voto : number){
+    console.log(voto);
+    
+  }
 }

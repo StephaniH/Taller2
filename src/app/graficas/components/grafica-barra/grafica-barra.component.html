@@ -11,6 +11,27 @@
             
             </ul>
         </div> 
+
+        <div class="row " style="text-align: center">
+            <h1>¿Cuál es el mejor framework?</h1>
+            <div class="col-4">
+                <img src="../../../../assets/opciones/Angular.png" alt="" width="200" height="200">
+                <br>
+                <button mat-raised-button color="primary" (click)="voto(1)" >Votar</button>
+            </div>
+            <div class="col-4">
+                <img src="../../../../assets/opciones/React.png" alt="" width="200" height="200">
+                <br>
+                <button mat-raised-button color="primary" (click)="voto(2)" >Votar</button>
+            </div> 
+            <div class="col-4">
+                <img src="../../../../assets/opciones/Vue.png" alt="" width="200" height="200">
+                <br>
+                <button mat-raised-button color="primary" (click)="voto(0)">Reiniciar</button>
+
+            </div>
+             
+        </div>
     </div>
     <router-outlet></router-outlet>
 </div>
