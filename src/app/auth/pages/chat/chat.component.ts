@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
-
+import { ActivatedRoute } from '@angular/router';
+import { WebSocketService } from 'src/app/services/web-socket.service'; 
 
 @Component({
   selector: 'app-chat',
@@ -8,70 +8,29 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent implements OnInit {
-  nuevoMensaje: string= '';
-  usuarioLogueado: string='';
-  mensajes:any = [
-    {
-      emisor:'enviado',
-      texto: 'Hola que tal?'
-    },
-    {
-      emisor:'recibido',
-      texto: 'Hola'
-    },
-    {
-      emisor:'enviado',
-      texto: 'como estas?'
-    },
-    {
-      emisor:'recibido',
-      texto: 'Bien, y tu?'
-    },
-    {
-      emisor:'enviado',
-      texto: 'dc?'
-    },
-    {
-      emisor:'recibido',
-      texto: 'Holacdscds'
-    },
-    {
-      emisor:'enviado',
-      texto: 'codcsdc?'
-    },
-    {
-      emisor:'recibido',
-      texto: 'Bcdscsdcsdcdd?'
-    },
-    {
-      emisor:'enviado',
-      texto: 'Hola que taldscds?'
-    },
-    {
-      emisor:'recibido',
-      texto: 'Hola ds ds sd'
-    },
-    {
-      emisor:'enviado',
-      texto: 'como estasd ds sd ds?'
-    },
-    {
-      emisor:'recibido',
-      texto: 'Bien, y tuds ds ds d sd ?'
-    }
-  ]
+ 
+  userChat = {
+    user: '',
+    text: ''
+  }
+  user: string = ''
+  myMessages:any 
+  
+  eventName = "send-message";
 
-  constructor() { }
+  constructor(private activated : ActivatedRoute, private webService: WebSocketService) { }
 
   ngOnInit(): void {
-  //   this.authService.getUserLogged().
-  //   // .subscribe((u: any) => {
-  //   //   this.usuarioLogueado = u;
-  //   // });
+    const id = this.activated.snapshot.params['id'];
+    this.userChat.user = id;
+    this.user=id
+    this.webService.listen('text-event').subscribe((data) => {
+      this.myMessages = data;
+    })
   }
-
-  enviarMensaje(){
-    console.log(this.nuevoMensaje);
-    this.nuevoMensaje = '';
+  
+  myMessage() {
+    this.webService.emit(this.eventName, this.userChat);
+    this.userChat.text = '';
   }
 }

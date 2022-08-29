@@ -3,11 +3,10 @@ h1 {
 }
 
 .cardContainer{
-    width: 800px;
+    width: 1100px;
     height: 480px;
-    position:fixed;
-    top: 100px;
-
+    position:absolute;
+    
 }
 
 .card-header{

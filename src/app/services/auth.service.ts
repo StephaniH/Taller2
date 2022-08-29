@@ -87,4 +87,8 @@ export class AuthService {
   logout() {
     localStorage.clear();
   }
+
+  getUser():string{
+    return this._usuario.name;
+  }
 }

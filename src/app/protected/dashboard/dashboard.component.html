@@ -1,13 +1,72 @@
-<h1>Dashboard</h1>
-<hr>
 
-<p>
-    Esta página sólo funciona si estás autenticado
-</p>
 
-<h4>User info</h4>
-<pre>{{ usuario | json }}</pre>
 
-<button (click)="logout()">
-    Logout
-</button>
+
+<br>
+<div class="container ">
+    <div class="row">
+        <div class="col-4">
+
+        </div>
+        <div class="col-4">
+            <h1>CHAT</h1>
+        </div>
+        <div class="col-4">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end p-3 ">
+                <br>
+                <button class="btn btn-primary me-md-2" type="button" (click)="logout()">
+                    Salir
+                </button>
+            </div>
+        </div>
+        <hr>
+    </div>
+    
+    <div class="row">
+
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <pre>{{ usuario | json }}</pre>
+
+                    <h5>Normas del chat</h5>
+                    <p>
+                        No envíes contenido inapropiado, repetido o innecesario. 
+                        Usa una gramática correcta para facilitar la lectura.
+                        Pide permiso antes de enviar un mensaje con un adjunto multimedia para no ocupar la memoria de los usuario: solo en caso de consentimiento unánime será posible realizar el envío.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    
+    
+    <div class="card test-center cardContainer">
+        <div class="card-header center">
+            CHAT GRUPAL CURSO ANGULAR
+        </div>
+        <div class="card-body">
+            <div>
+                <p *ngFor="let a of myMessages " class="p-1" [ngClass]="(a.user==user)? 'enviado' : 'recibido'">
+                &nbsp;&nbsp;{{a.user}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {{a.time}}<br> &nbsp;&nbsp; <span class="text-center">{{a.text}}</span>
+                </p>
+            </div>
+        </div>
+        <div class="card-footer test-muted input-group">
+            <input type="text" class="form-control" (change)="myMessage()" placeholder="Ingresar mensaje" [(ngModel)]="userChat.text" [ngModelOptions]="{standalone: true}">
+            <div class="input-group-append" (click)="myMessage()">
+                <span class="input-group-text" id="basic-addon2">
+                <img class="imgEnviar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-EN6Gv-yRxx-RbHi-6ugufwzle6DKBUO6DQ&usqp=CAU" width="30px" alt="send message"> 
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
